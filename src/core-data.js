@@ -1,6 +1,6 @@
-import CoreLogo from "./images/bulb.svg";
-import PropsLogo from "./images/pops.svg";
-import DomLogo from "./images/dom.svg";
+import CoreLogo from "./Images/bulb.svg";
+import PropsLogo from "./Images/pops.svg";
+import DomLogo from "./Images/dom.svg";
 
 export const CoreData = [
   {

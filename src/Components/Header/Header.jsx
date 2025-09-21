@@ -1,5 +1,5 @@
-import "./header.css";
-import ReactLogo from "../../images/logo.svg";
+import "./Header.css";
+import ReactLogo from "../../Images/logo.svg";
 
 export default function Header() {
   return (

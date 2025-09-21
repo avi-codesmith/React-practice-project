@@ -1,4 +1,4 @@
-import "./core-concept.css";
+import "./CoreConcept.css";
 
 // ++++++++++++++++++++++++++++++++++ TWO WAYS +++++++++++++++++++++++++++++++++
 
