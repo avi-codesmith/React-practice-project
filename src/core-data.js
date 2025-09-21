@@ -1,6 +1,6 @@
-import CoreLogo from "./bulb.svg";
-import PropsLogo from "./pops.svg";
-import DomLogo from "./dom.svg";
+import CoreLogo from "./images/bulb.svg";
+import PropsLogo from "./images/pops.svg";
+import DomLogo from "./images/dom.svg";
 
 export const CoreData = [
   {
@@ -16,6 +16,6 @@ export const CoreData = [
   {
     src: DomLogo,
     heading: "Virtual DOM",
-    para: "The Virtual DOM is a lightweight copy of the actual DOM that React uses to optimize UI updates. When the state changes, React updates the Virtual DOM first, compares it with the real DOM, and efficiently updates only the necessary parts, improving performance and user experience.",
+    para: "The Virtual DOM is a lightweight copy of the actual DOM that React uses to optimize UI updates. When the state changes, React updates the Virtual DOM first, compares it with the real DOM, and efficiently updates only the necessary parts, improving performance.",
   },
 ];

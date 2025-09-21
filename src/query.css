@@ -1,0 +1,40 @@
+@media (max-width: 768px) {
+  .initial-wrapper {
+    padding: 20px;
+  }
+
+  .header {
+    padding: 20px 15px;
+  }
+
+  .header h1 {
+    font-size: 2.2rem;
+  }
+
+  .header p {
+    font-size: 1rem;
+  }
+
+  .core-concepts-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .header img {
+    height: 80px;
+    width: 80px;
+  }
+
+  .header h1 {
+    font-size: 1.8rem;
+  }
+
+  .core-concept-content {
+    padding: 20px;
+  }
+
+  .core-concept h1 {
+    font-size: 1.3rem;
+  }
+}
