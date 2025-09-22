@@ -1,12 +1,9 @@
 import "./TabBtn.css";
 
-export default function ({ children }) {
-  function handleClick() {
-    console.log("cliked");
-  }
+export default function ({ children, onCliking }) {
   return (
-    <li onClick={handleClick}>
-      <button>{children}</button>
+    <li>
+      <button onClick={onCliking}>{children}</button>
     </li>
   );
 }

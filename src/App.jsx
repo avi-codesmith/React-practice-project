@@ -5,8 +5,14 @@ import { CoreData } from "./core-data.js";
 import Header from "./Components/Header/Header.jsx";
 import CoreConcept from "./Components/CoreConcept/CoreConcept.jsx";
 import TabBtn from "./Components/TabBtn/TabBtn.jsx";
+import { Component } from "react";
 
 function App() {
+  let tabContent = "Pls click a btn";
+  function onclickHandle(name, tabContent) {
+    tabContent = name;
+    console.log(tabContent);
+  }
   return (
     <div className="initial-wrapper">
       <Header />
@@ -29,11 +35,14 @@ function App() {
       <section id="examples">
         <h1>Examples</h1>
         <menu>
-          <TabBtn>Components</TabBtn>
-          <TabBtn>JSX</TabBtn>
-          <TabBtn>Props</TabBtn>
-          <TabBtn>State</TabBtn>
+          <TabBtn onCliking={() => onclickHandle("component")}>
+            Components
+          </TabBtn>
+          <TabBtn onCliking={() => onclickHandle("jsx")}>JSX</TabBtn>
+          <TabBtn onCliking={() => onclickHandle("props")}>Props</TabBtn>
+          <TabBtn onCliking={() => onclickHandle("state")}>State</TabBtn>
         </menu>
+        <div className="code">{tabContent}</div>
       </section>
     </div>
   );
