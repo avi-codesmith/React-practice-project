@@ -2,8 +2,8 @@ import "./TabBtn.css";
 
 export default function ({ children, onCliking }) {
   return (
-    <li>
+    <a>
       <button onClick={onCliking}>{children}</button>
-    </li>
+    </a>
   );
 }

@@ -5,14 +5,31 @@ import { CoreData } from "./core-data.js";
 import Header from "./Components/Header/Header.jsx";
 import CoreConcept from "./Components/CoreConcept/CoreConcept.jsx";
 import TabBtn from "./Components/TabBtn/TabBtn.jsx";
-import { Component } from "react";
+import { useState } from "react";
+import { EXAMPLES } from "./data.js";
 
 function App() {
-  let tabContent = "Pls click a btn";
-  function onclickHandle(name, tabContent) {
-    tabContent = name;
-    console.log(tabContent);
+  const [selectedTopic, setSelectedTopic] = useState();
+
+  function onclickHandle(BtnName) {
+    setSelectedTopic(BtnName);
+    console.log(selectedTopic);
   }
+
+  let TabContent = <p className="request">Please select a button!</p>;
+
+  if (selectedTopic) {
+    TabContent = (
+      <div className="TabContent">
+        <h3>{EXAMPLES[selectedTopic].title}</h3>
+        <p>{EXAMPLES[selectedTopic].description}</p>
+        <pre>
+          <code>{EXAMPLES[selectedTopic].code}</code>
+        </pre>
+      </div>
+    );
+  }
+
   return (
     <div className="initial-wrapper">
       <Header />
@@ -35,14 +52,14 @@ function App() {
       <section id="examples">
         <h1>Examples</h1>
         <menu>
-          <TabBtn onCliking={() => onclickHandle("component")}>
+          <TabBtn onCliking={() => onclickHandle("components")}>
             Components
           </TabBtn>
           <TabBtn onCliking={() => onclickHandle("jsx")}>JSX</TabBtn>
           <TabBtn onCliking={() => onclickHandle("props")}>Props</TabBtn>
           <TabBtn onCliking={() => onclickHandle("state")}>State</TabBtn>
         </menu>
-        <div className="code">{tabContent}</div>
+        {TabContent}
       </section>
     </div>
   );

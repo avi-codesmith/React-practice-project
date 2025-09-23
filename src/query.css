@@ -38,3 +38,18 @@
     font-size: 1.3rem;
   }
 }
+
+@media (max-width: 640px) {
+  .TabContent {
+    padding: 16px;
+    border-radius: 12px;
+    margin: 12px;
+  }
+  .TabContent h3 {
+    font-size: 1.2rem;
+  }
+  .TabContent pre {
+    padding: 12px;
+    font-size: 0.82rem;
+  }
+}
