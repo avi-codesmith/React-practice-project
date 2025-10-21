@@ -37,12 +37,13 @@
   text-transform: uppercase;
 }
 
-#examples menu button:hover {
+#examples menu button:hover,
+#examples menu button.active {
   background: #61dafb;
   color: #1e1e2f;
   transform: scale(1.05);
 }
 
-#examples menu button:active {
-  transform: scale(0.95);
+#examples menu button.active {
+  transform: scale(0.9) !important;
 }

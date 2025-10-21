@@ -1,9 +1,14 @@
 import "./TabBtn.css";
 
-export default function ({ children, onCliking }) {
+export default function ({ children, onCliking, isClicked }) {
   return (
     <a>
-      <button onClick={onCliking}>{children}</button>
+      <button
+        className={isClicked === true ? "active" : undefined}
+        onClick={onCliking}
+      >
+        {children}
+      </button>
     </a>
   );
 }
