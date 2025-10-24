@@ -1,10 +1,10 @@
 import CoreConcept from "../CoreConcept/CoreConcept.jsx";
 import { CoreData } from "../../core-data.js";
+import Section from "../FileSection/FileSection.jsx";
 
 export default function CoreConcepts() {
   return (
-    <section id="core-concept">
-      <h1 className="core-heading">Core Concepts of React JS</h1>
+    <Section title="Core Concepts of React JS">
       <div className="core-concept-container">
         {CoreData.map((coreBlocks) => {
           return (
@@ -14,6 +14,6 @@ export default function CoreConcepts() {
           );
         })}
       </div>
-    </section>
+    </Section>
   );
 }
